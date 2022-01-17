@@ -1,0 +1,67 @@
+.row /*Ligne*/
+{
+	display : flex;
+	background-color: blue;
+	border: 3px blue inset;
+}
+.cell /*Cellule*/
+{
+	width: 2cm;
+    height: 2cm;
+    margin: 10px;
+    padding: 10px;
+    margin-right: 30px;
+    border: 4px blue inset;
+    border-radius: 55px;
+    background-color: grey;
+}
+.red /*Jeton*/
+{
+	/*background-color: red;*/
+	background-image: url(joe2.0.jpg);
+	background-size: cover; 
+}
+.yellow /*Jeton*/
+{
+	/*background-color: yellow;*/
+	background-image: url(trump2.0.jpg);
+	background-size: cover; 
+}
+#menu /*Barre à droite*/
+{
+	background: #CA6B3F;
+	text-align: center;
+}
+#insertionPseudoJoueur /*Affichage joueur*/
+{
+	font-size: 24px;
+	font-weight: bold;
+}
+.buttonPseudo /*Bouton pseudo*/
+{
+	width: 40%;
+	height: 10%;
+	font-size: 24px;
+	background-color: gold; 
+	text-align: center;
+	margin-top: 50%;
+	cursor: pointer;
+}
+#info /*Titre info*/
+{
+	margin-top: 25%;
+}
+#info2 /*Contenun info*/
+{
+	padding: 2%;
+}
+article /*Grille*/
+{
+	color: black;
+	text-align: center;
+}
+body /*Corp de la page*/
+{
+	background-color: black;
+	display : flex;
+}
