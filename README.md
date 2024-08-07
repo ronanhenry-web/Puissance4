@@ -1,27 +1,12 @@
+# Projet Puissance4
 
-
-
-# Projet Projet HTML, CSS et JavaScript
-
-Objectif appeler une API et faire du front-end
+Découverte du langage
 
 ## Démarrer
 
 Le projet a été créé sous VSCode, pour le démarrer suivre les étapes suivantes.
 
-Comme le design est réaliser sous Less et que j'ai utilisé un bundler, faire : 
-- Se placer à la racine du projet
-
-```bash
-npm install vite
-```
-
-```bash
-npx vite
-```
-
-- Récupérer le localhost et l'insérer dans l'url de votre navigateur
-- Place au Pokédex
+- Ajouter l'extension LiveServer sur l'IDE
 
 ## Sources & Outils
 
