@@ -1,4 +1,4 @@
-# Projet Puissance4
+# Projet Puissance 4
 
 Découverte du langage
 
