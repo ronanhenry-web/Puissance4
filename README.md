@@ -6,7 +6,7 @@ Découverte du langage
 
 Le projet a été créé sous VSCode, pour le démarrer suivre les étapes suivantes.
 
-- Cloner le projet dans un serveur web comme WampServer (dossier www) puis lancer le jeu
+- Cloner le projet dans un serveur web comme WampServer (dossier www) puis lancer le jeu sous le localhost de Wamp
 
 ## Sources & Outils
 
