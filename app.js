@@ -9,18 +9,18 @@ let htmlGrid = ""; //tableau cellule
 let pseudo_Joueur = [""]; //pseudo joueur
 
 //Déclaration tableau
+for (let i = 0; i < ROWS; i++) {
+	tableau.push([]);
+	for (let j = 0; j < COLUMNS; j++) {
+		tableau[i].push(0);
+	}
+}
+
 //Changement de joueur 1 et 2
 function ChangerTour() {
 	let tourJ = document.getElementById("tourJ");
 	if(currentPlayerTurn == 1) {
-		currentPlayer
-for (let i = 0; i < ROWS; i++) {
-  tableau.push([]);
-  for (let j = 0; j < COLUMNS; j++) {
-    tableau[i].push(0);
-  }
-}
-Turn = 2;
+		currentPlayerTurn = 2;
 		tourJ.innerHTML = currentPlayerTurn; //Changement tour
 	} else {
 		currentPlayerTurn = 1;
@@ -176,42 +176,29 @@ function MatchNul() {
 
 //Permet d'enlever les jetons en liaison avec la fonction event
 function reset() {
-	let gameEnded = event.key;
-	if(gameEnded && event.key == "Enter") {
-		//Reset les jetons en parcourant la grille et supprimant les valeurs/la couleur & changement de joueur
-		for (let i = 0; i < ROWS; i++) {
-			for(let j = 0; j < COLUMNS; j++) {
-				tableau[i][j] = 0;
-				document.getElementById(i + "," + j)
-				.classList.remove("red");
-				tableau[i][j] = 0;
-				document.getElementById(i + "," + j)
-				.classList.remove("yellow");
-			}
+	for (let i = 0; i < ROWS; i++) {
+		for (let j = 0; j < COLUMNS; j++) {
+			tableau[i][j] = 0;
+			let cell = document.getElementById(i + "," + j);
+			cell.classList.remove("red", "yellow");
 		}
-		//console.log(currentPlayerTurn); //Test
-		ChangerTour(false);
-		//console.log(currentPlayerTurn); /Test
-	}	
-//console.log(tableau) //Test
-//console.log(gameEnded); //Test
+	}
+	ChangerTour();
 }
 
  //Interface joueur demande un pseudo et l'affiche dans un bloc
 function choixPseudo() {
-	var txt;
-	var personne1 = prompt("Insérer votre pseudo", "Joueur 1 : ");
-	if(personne1 == null || personne1 == "") {
-		txt = "Pseudo invalide";
+	pseudo_Joueur[1] = prompt("Insérer votre pseudo pour le joueur 1", "Joueur 1");
+	if (pseudo_Joueur[1] == null || pseudo_Joueur[1] === "") {
+		pseudo_Joueur[1] = "Joueur 1";
 	}
-	var personne2 = prompt("Insérer votre pseudo", "Joueur 2 : ");
-	if(personne1 == null || personne1 == "") {
-		txt = "Pseudo invalide";
-	} else {
-		txt = "Joueur 1 : " + personne1 + " " + "VS" + " " + "Joueur 2 : " + personne2
+	pseudo_Joueur[2] = prompt("Insérer votre pseudo pour le joueur 2", "Joueur 2");
+	if (pseudo_Joueur[2] == null || pseudo_Joueur[2] === "") {
+		pseudo_Joueur[2] = "Joueur 2";
 	}
+	let txt = "Joueur 1 : " + pseudo_Joueur[1] + " VS " + "Joueur 2 : " + pseudo_Joueur[2];
 	document.getElementById("insertionPseudoJoueur").innerHTML = txt;
 
-	//Permet d'afficher le tour de joueur
+	// Permet d'afficher le tour de joueur
 	document.getElementById("tourJ").innerHTML = pseudo_Joueur[currentPlayerTurn];
 }
