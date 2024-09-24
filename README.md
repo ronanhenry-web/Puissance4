@@ -1,14 +1,14 @@
-# Projet Puissance 4
+# Puissance 4 Project
 
-Découverte du langage
+Exploring the language
 
-## Démarrer
+## Getting Started
 
-Le projet a été créé sous VSCode, pour le démarrer suivre les étapes suivantes.
+he project was created using VSCode. To get it running, follow these steps :
 
-- Cloner le projet dans un serveur web comme WampServer (dossier www) puis lancer le jeu sous le localhost de Wamp
+- Clone the project into a web server like WampServer (www folder), then run the game under the localhost of Wamp.
 
-## Sources & Outils
+## Sources & Tools
 
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
 
